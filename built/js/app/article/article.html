@@ -1,0 +1,27 @@
+<!-- {{#each conditions}}
+  <h2>{{@key}}</h2>
+  {{#each this}}
+    <li data-id="{{id}}" {{#if selected}} class="m-active" {{/if}}>{{name}}</li>
+  {{/each}}
+{{/each}}
+ -->
+{{#each conditions}}
+<article data-id="{{id}}" data-key="{{@key}}">
+    <header>
+        <h3>{{title}}</h3>
+    </header>
+    <section>
+        <p>{{body}}</p>
+    </section>
+    <footer>
+        <div class="tags">
+          {{#each tags}}
+            <button class="btn btn-xs btn-default">{{this}}</buttonn>
+          {{/each}}
+        </div>
+    </footer>
+    <div class="controls">
+        <button class="btn btn-danger btn-mini" data-delete="{{id}}" data-keydelete="{{@key}}">удалить</button>
+    </div>
+</article>
+{{/each}}
