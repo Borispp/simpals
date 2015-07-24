@@ -23,10 +23,13 @@ define(['jquery', 'handlebars', 'text!./article.html'], function($, Handlebars, 
         success: (function(_this) {
           return function(response) {
             console.log(response);
-            if (_this.localStorage.getItem('articles' != null)) {
-              return _this.setLocalStorage(response);
+            console.log(_this.localStorage.getItem('articles'));
+            if (_this.localStorage.getItem('articles') === null) {
+              _this.setLocalStorage(response);
+              return console.log('localStorage');
             } else {
-              return _this.render();
+              _this.render();
+              return console.log('render');
             }
           };
         })(this),

@@ -30,12 +30,14 @@ define [
         url: '../json/posts.json'
         success: (response) =>
           console.log response
-
+          console.log @localStorage.getItem 'articles'
           # Rewrite localStorage from actual ServerData if localStorage.articles is not defined
-          if @localStorage.getItem 'articles'?
+          if @localStorage.getItem('articles') == null
             @setLocalStorage(response)
+            console.log 'localStorage'
           else
             @render()
+            console.log 'render'
 
         error: (response) =>
           console.log 'Error'
