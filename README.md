@@ -1,4 +1,4 @@
-Все интересное в /built/js/app/article/
+Все интересное в /resources/article/article.coffee
 
 Генерация CoffeeScript: из /resources/: coffee -o ../built/js/app/ -bcw ./
 
