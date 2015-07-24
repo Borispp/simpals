@@ -2,7 +2,7 @@
 
 Генерация CoffeeScript: из /resources/: coffee -o ../built/js/app/ -bcw ./
 
-Использую:
+*Использую:*
 - CoffeeScript (ООП на JS без него совсем грустный)
 - Jquery (просто нравится)
 - RequireJS, что бы при добавлении новых модулей не было каши.
